@@ -1,24 +1,22 @@
 package com.driver;
 
 public class Main {
+    public static void main(String[] args) {
+        B obj=new B();
 
-
-    public static  void main(String args[]){
-       Product p=new Product();
-       int ans=p.product(10,20);
-       int ans2=p.product(10,20,30);
-       double ans3=p.product(1.0,2.0);
-
+        System.out.println(obj.meth());
     }
-    public static  class Product{
-        public  int product(int x,int y){
-            return x*y;
-        }
-        public int product(int x, int y, int z){
-            return x*y*z;
-        }
-        public double product(double x, double y){
-            return x*y;
-        }
+
+}
+
+class A{
+    String meth(){
+        return "Invoking method from class A";
+    }
+}
+
+class B extends A{
+    String meth(){
+        return "Method is overridden in Extendend class B";
     }
 }
